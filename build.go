@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 01. 02. 2021 by Benjamin Walkenhorst
 // (c) 2021 Benjamin Walkenhorst
-// Time-stamp: <2026-11-06 13:33:23 krylon>
+// Time-stamp: <2026-11-07 14:43:58 krylon>
 
 //go:build ignore
 // +build ignore
@@ -60,56 +60,20 @@ var candidates = map[string][]string{
 	"generate": {
 		"common",
 		"logdomain",
-		"model/device",
-		"model/attribute",
-		"database/query",
-		"control",
 	},
 	"vet": {
 		"logdomain",
 		"common",
-		"model",
-		"model/device",
-		"model/attribute",
-		"database",
-		"database/query",
-		"scanner",
-		"control",
-		"probe",
-		"config",
 	},
 	"lint": {
 		"logdomain",
 		"common",
-		"model",
-		"model/device",
-		"model/attribute",
-		"database",
-		"database/query",
-		"scanner",
-		"control",
-		"probe",
-		"config",
 	},
 	"nilaway": {
 		"logdomain",
 		"common",
-		"model",
-		"model/device",
-		"model/attribute",
-		"database",
-		"database/query",
-		"scanner",
-		"control",
-		"probe",
-		"config",
 	},
-	"test": {
-		"web",
-		"database",
-		"probe",
-		"config",
-	},
+	"test": {},
 }
 
 // During the clean step, all files and folders that match any of these
@@ -259,7 +223,7 @@ This flag is not case-sensitive.`, strings.Join(orderedSteps, ", ")))
 	if steps["build"] {
 		var output []byte
 
-		dbg.Println("[INFO] Building Chili...")
+		dbg.Println("[INFO] Building Wobbly...")
 
 		// Put aside a possibly existing binary
 		if err = backupExecutable(); err != nil {
@@ -279,7 +243,7 @@ This flag is not case-sensitive.`, strings.Join(orderedSteps, ", ")))
 		}
 		var cmd = exec.Command("go", args...)
 		if output, err = cmd.CombinedOutput(); err != nil {
-			dbg.Printf("[ERROR] Error building chili: %s\n%s\n",
+			dbg.Printf("[ERROR] Error building wobbly: %s\n%s\n",
 				err.Error(),
 				output)
 			os.Exit(1)
@@ -390,7 +354,7 @@ func worker(n int, op string, pkgq <-chan string, errq chan<- error, wg *sync.Wa
 	defer wg.Done()
 
 	for folder := range pkgq {
-		pkg = "github.com/blicero/chili/" + folder
+		pkg = "github.com/blicero/wobbly/" + folder
 		dbg.Printf("[TRACE] Worker %d call %s on %s\n",
 			n,
 			op,
@@ -488,7 +452,7 @@ func initLog(min string) error {
 		writer io.Writer
 		// Trailing space because Logger does not seem to insert one
 		// between fields of the line.
-		logName = "chili.build "
+		logName = "wobbly.build "
 	)
 
 	// fmt.Printf("Creating Logger with minLevel = %q\n",
@@ -518,9 +482,9 @@ func initLog(min string) error {
 
 func backupExecutable() error {
 	const (
-		execPath       = "chili"
-		backupPath     = "bak.chili"
-		compressedPath = "bak.chili.xz"
+		execPath       = "wobbly"
+		backupPath     = "bak.wobbly"
+		compressedPath = "bak.wobbly.xz"
 	)
 	var (
 		exists bool
