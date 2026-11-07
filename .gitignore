@@ -1,0 +1,46 @@
+# Binaries for programs and plugins
+# Time-stamp: <2026-11-06 13:59:28 krylon>
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+*~
+*#
+.*
+*.log
+*TAGS*
+tags
+bak.*
+*.bak
+
+*_string.go
+*_gen.go
+
+.mypy.cache
+__pycache__
+
+*.pyc
+
+# Output of profiler runs
+*.prof
+
+# Files left by tesseract
+*.bin
+*.dat
+
+# Cscope / Codequery
+cscope.*
+myproject.db
+
+monkeytype.sqlite3
+
+chili
+*.chili
+
