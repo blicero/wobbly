@@ -2,12 +2,14 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 08. 11. 2026 by Benjamin Walkenhorst
 // (c) 2026 Benjamin Walkenhorst
-// Time-stamp: <2026-11-09 16:02:08 krylon>
+// Time-stamp: <2026-11-09 16:27:36 krylon>
 
 // Package model provides data types used throughout the application.
 package model
 
 import (
+	"time"
+
 	"github.com/blicero/wobbly/model/period"
 )
 
@@ -17,4 +19,5 @@ type Job struct {
 	Command string
 	Period  period.Period
 	Delay   int64
+	LastRun time.Time
 }
