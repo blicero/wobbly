@@ -26,3 +26,21 @@ type Period struct {
 	Unit  Unit
 	Count int64
 }
+
+// Duration returns the Periods ... well, Duration.
+func (p *Period) Duration() time.Duration {
+	var res time.Duration
+
+	switch p.Unit {
+	case Hour:
+		res = time.Hour
+	case Day:
+		res = time.Hour * 24
+	case Week:
+		res = time.Hour * 24 * 7
+	}
+
+	res *= time.Duration(p.Count)
+
+	return res
+} // func (p *Period) Duration() time.Duration
