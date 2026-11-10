@@ -1,5 +1,5 @@
 # -*- mode: org; fill-column: 78; -*-
-# Time-stamp: <2026-11-09 16:02:35 krylon>
+# Time-stamp: <2026-11-10 09:06:45 krylon>
 #
 #+TAGS: internals(i) ui(u) bug(b) feature(f)
 #+TAGS: database(d) design(e), meditation(m)
@@ -17,14 +17,14 @@
   maybe with a finer granularity.
 ** Clocktable
    #+BEGIN: clocktable :scope file :maxlevel 255 :emphasize t
-   #+CAPTION: Clock summary at [2026-11-09 Mo 16:02]
+   #+CAPTION: Clock summary at [2026-11-10 Di 09:06]
    | Headline                          | Time   |        |      |
    |-----------------------------------+--------+--------+------|
-   | *Total time*                      | *2:14* |        |      |
+   | *Total time*                      | *2:27* |        |      |
    |-----------------------------------+--------+--------+------|
-   | *Wibbly-Wobbly-Timey-Wimey [0/0]* | *2:14* |        |      |
-   | \_  /Components [0/0]/            |        | /2:14/ |      |
-   | \_    Data Model [0/0]            |        |        | 2:14 |
+   | *Wibbly-Wobbly-Timey-Wimey [0/0]* | *2:27* |        |      |
+   | \_  /Components [0/0]/            |        | /2:27/ |      |
+   | \_    Data Model [0/0]            |        |        | 2:27 |
    #+END:
 ** Components [0/0]
    :PROPERTIES:
@@ -37,9 +37,15 @@
     :VISIBILITY: all
     :END:
     :LOGBOOK:
+    CLOCK: [2026-11-09 Mo 16:27]--[2026-11-09 Mo 16:40] =>  0:13
     CLOCK: [2026-11-09 Mo 15:52]--[2026-11-09 Mo 16:02] =>  0:10
     CLOCK: [2026-11-08 So 10:56]--[2026-11-08 So 13:00] =>  2:04
     :END:
+*** Parser [0/0]
+    Unless I want to use a truly primitive configuration format, I'll have to
+    parse the config file.
+    I'd better start out by writing a sample config file and see how fancy I
+    want to get.
 ** Features [0/0]
    :PROPERTIES:
    :COOKIE_DATA: todo recursive
