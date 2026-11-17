@@ -1,0 +1,8 @@
+# -*- mode: conf; coding: utf-8; -*-
+# Time-stamp: <2026-11-11 05:30:19 krylon>
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# unit  period  delay   name    command
+daily   2       60      job01   ls /bin
