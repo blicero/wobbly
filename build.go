@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 01. 02. 2021 by Benjamin Walkenhorst
 // (c) 2021 Benjamin Walkenhorst
-// Time-stamp: <2026-11-17 20:18:16 krylon>
+// Time-stamp: <2026-11-17 22:00:21 krylon>
 
 //go:build ignore
 // +build ignore
@@ -68,6 +68,7 @@ var candidates = map[string][]string{
 		"model",
 		"model/period",
 		"parser",
+		"engine",
 	},
 	"lint": {
 		"logdomain",
@@ -75,6 +76,7 @@ var candidates = map[string][]string{
 		"model",
 		"model/period",
 		"parser",
+		"engine",
 	},
 	"nilaway": {
 		"logdomain",
@@ -82,6 +84,7 @@ var candidates = map[string][]string{
 		"model",
 		"model/period",
 		"parser",
+		"engine",
 	},
 	"test": {
 		"parser",
