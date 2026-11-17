@@ -2,7 +2,7 @@
 // -*- mode: go; coding: utf-8; -*-
 // Created on 01. 02. 2021 by Benjamin Walkenhorst
 // (c) 2021 Benjamin Walkenhorst
-// Time-stamp: <2026-11-09 15:54:49 krylon>
+// Time-stamp: <2026-11-17 20:18:16 krylon>
 
 //go:build ignore
 // +build ignore
@@ -67,20 +67,25 @@ var candidates = map[string][]string{
 		"common",
 		"model",
 		"model/period",
+		"parser",
 	},
 	"lint": {
 		"logdomain",
 		"common",
 		"model",
 		"model/period",
+		"parser",
 	},
 	"nilaway": {
 		"logdomain",
 		"common",
 		"model",
 		"model/period",
+		"parser",
 	},
-	"test": {},
+	"test": {
+		"parser",
+	},
 }
 
 // During the clean step, all files and folders that match any of these
